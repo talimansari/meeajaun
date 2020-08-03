@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'hk_groteskbold';
+    src: url('../webfonts/hkgrotesk-bold-webfont.eot');
+    src: url('../webfonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/hkgrotesk-bold-webfont.woff2') format('woff2'),
+         url('../webfonts/hkgrotesk-bold-webfont.woff') format('woff'),
+         url('../webfonts/hkgrotesk-bold-webfont.ttf') format('truetype'),
+         url('../webfonts/hkgrotesk-bold-webfont.svg#hk_groteskbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hk_groteskmedium';
+    src: url('../webfonts/hkgrotesk-medium-webfont.eot');
+    src: url('../webfonts/hkgrotesk-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/hkgrotesk-medium-webfont.woff2') format('woff2'),
+         url('../webfonts/hkgrotesk-medium-webfont.woff') format('woff'),
+         url('../webfonts/hkgrotesk-medium-webfont.ttf') format('truetype'),
+         url('../webfonts/hkgrotesk-medium-webfont.svg#hk_groteskmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'hk_groteskregular';
+    src: url('../webfonts/hkgrotesk-regular-webfont.eot');
+    src: url('../webfonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/hkgrotesk-regular-webfont.woff2') format('woff2'),
+         url('../webfonts/hkgrotesk-regular-webfont.woff') format('woff'),
+         url('../webfonts/hkgrotesk-regular-webfont.ttf') format('truetype'),
+         url('../webfonts/hkgrotesk-regular-webfont.svg#hk_groteskregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'hk_grotesksemibold';
+    src: url('../webfonts/hkgrotesk-semibold-webfont.eot');
+    src: url('../webfonts/hkgrotesk-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/hkgrotesk-semibold-webfont.woff2') format('woff2'),
+         url('../webfonts/hkgrotesk-semibold-webfont.woff') format('woff'),
+         url('../webfonts/hkgrotesk-semibold-webfont.ttf') format('truetype'),
+         url('../webfonts/hkgrotesk-semibold-webfont.svg#hk_grotesksemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+font-family: 'hk_groteskregular';
+}
+a{
+    display: inline-block;
+}
+a:hover{text-decoration: none;color: #fff;}
+img{
+    max-width: 100%;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+button:focus{
+    outline: unset;
+}
+li{
+    list-style: none;
+}
+input:focus {
+    outline: unset;
+}
+img{max-width: 100%;}
+
+a:hover{text-decoration: none;}
+
+h6,h2,.h-button a{
+  font-family: 'hk_grotesksemibold';
+}
+/*--header-section-------*/
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.navbar-wrapper ul{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.navbar-wrapper ul li{
+margin-right: 25px;
+}
+
+.navbar-wrapper ul li a,.sign-in a{
+  font-size: 14px;
+  color: #7a6e4f;
+  font-family: 'hk_grotesksemibold';
+  text-transform: uppercase;  
+}
+.sign-in a{
+ border: 1px solid #7a6e4f;
+    padding: 6px 16px;
+    border-radius: 5px;
+    line-height: 25px;
+    transition: 0.2s;
+}
+.sign-in a:hover{
+  background-color: #7a6a4f;
+  border:1px solid #7a6a4f;
+  color: #fff;
+}
+.header-section{
+  transition: all 0.6s ease;
+}
+.header-section.active{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    width: 100%;
+    transform-origin: center top;
+    transform: scaleY(1) translateY(0px);
+    opacity: 1;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+a.menu-bar {
+    display: inline-block;
+    font-size: 0;
+    width: 30px;
+}
+
+a.menu-bar span.bars {
+    display: inline-block;
+    background-color: #82775a;
+    width: 85%;
+    line-height: 1;
+    border-radius: 5px;
+    height: 4px;
+    margin: 0 0 3px;
+}
+span.bars:last-child{margin:0;}
+.navbar-toggler.collapsed .bar1 {transform: rotate(0);}
+.navbar-toggler .bar1 {
+    transform: rotate(45deg);
+    transform-origin: 9% 10%;
+    transition: .5s;
+}
+.navbar-toggler.collapsed .bar2 {opacity: 1;}
+.navbar-toggler .bar2 {opacity: 0; transition: .5s;}
+.navbar-toggler.collapsed .bar3 {transform: rotate(0);}
+.navbar-toggler .bar3 {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+    transition: .5s;
+}
+/*---banner-section----*/
+.banner-section{
+  position: relative;
+}
+.banner-section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #000;
+    opacity: 50%;
+}
+/*--who-are-we-section----*/
+.who-we-rt-content{
+  position: relative;
+}
+.who-we-overlay{
+  max-width: 350px;
+  position: absolute !important;
+  bottom: 50px;
+  padding: 22px;
+  right: 85%;
+  background-color:#82775a;
+}
+.who-we-overlay p{
+  margin-bottom: 0;
+}
+/*--growing-section--*/
+.growing-content{
+ max-width: 625px;
+ margin: 0 auto;
+}
+.growing-section{
+position: relative;
+z-index: 99;
+}
+.growing-section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #000;
+    opacity: 40%;
+    
+}
+/*--what-we-do-section----*/
+.best-service{
+  margin-bottom: 10px !important ;
+}
+.what-we-wrap:hover .box-icon i{
+ color: #fff;
+}
+.box-content h2{
+  color: #404040 !important;
+  transition: 0.2s;
+}
+.box-content p{
+  color: #8D8E90 !important;
+  transition: 0.2s;
+}
+
+.what-we-wrap:hover .box-content h2{
+  color: #fff !important;
+}
+.what-we-wrap:hover .box-content p{
+ color: #fff !important;
+}
+/*--blog-section---*/
+.blog-date,.blog-content{
+  margin-bottom: 0 !important;
+}
+.blog-tittle{
+  margin-bottom: 10px !important;
+}
+.blog-date p{
+  margin-bottom: 10px;
+}
+/*--contact -us-section---*/
+.contact-us-img{
+  margin-top: -100px;
+}
+/*--footer-section--*/
+.footer-section{
+  background-color: #404040;
+  padding-top:45px;
+}
+.footer-section h3{
+ font-size: 16px;
+ color: #fff;
+   font-family: 'hk_grotesksemibold';
+   text-transform: uppercase;
+}
+.footer-section li a{
+  font-size: 14px;
+  color: #fff;
+} 
+.footer-section li{
+  margin-top: 5px;
+}
+.footer-section li span{
+  font-size: 14px;
+  color: #fff;
+}
+.footer-section #menu-social-menu {
+    display: flex;
+}
+.footer-section #menu-social-menu li a{
+      background-color: #666666;
+    font-size: 14px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff! important;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+.footer-section #menu-social-menu li a:hover{
+ background-color: #82775A;
+}
+.copyright {
+    text-align: center;
+    border-top: 1px solid #535353;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 45px;
+}
+.footer-logo{
+margin-top: 10px;
+}
