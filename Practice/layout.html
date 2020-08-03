@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout</title>
+	<style>
+		div.static{
+			position:static;
+			border:2px solid green;
+}
+	</style>
+</head>
+<body>
+	<h1>position satatic</h1>
+<p>An element with position: static; is not positioned in any special way; it is 
+always positioned according to the normal flow of the page:</p>
+
+<div class="static">
+  This div element has position: static;
+</div>
+<hr>
+<style>
+		div.relative{
+			position:relative;
+			border:2px solid green;
+			
+			right: 20px;
+}
+	</style>
+</head>
+<body>
+	<h1>position relative</h1>
+<p>An element with position: static; is not positioned in any special way; it is 
+always positioned according to the normal flow of the page:</p>
+<div class="relative">
+  This div element has position: static;
+</div>
+<style>
+		div.fixed{
+			position:fixed;
+			border:2px solid green;
+			width: 300px;
+			right: 50px;
+			bottom: 0px;
+}
+	</style>
+</head>
+<body>
+	<h1>position fixed</h1>
+<p>An element with position: static; is not positioned in any special way; it is 
+always positioned according to the normal flow of the page:</p>
+<div class="fixed">
+  This div element has position: static;
+</div>
+<hr>
+<style>
+		div.relative{
+			position:relative;
+			border:2px solid green;
+			width: 400px;
+			height: 200px;
+			left: 50px;
+		}
+		div.absolute{
+			position: absolute;
+			top: 80px;
+			right: 30px;
+			width: 200px;
+			height: 100px;
+			border:3px solid green;
+		}
+			
+	</style>
+	<hr>
+</body>
+</html>
+<hr>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout</title>
+	<style>
+  	div.sticky{
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+			
+			padding: 5px;
+			background-color: #cae8ca;
+
+		
+			border:3px solid green;
+		}
+			
+	</style>
+</head>
+<body>
+
+<body>
+	<h1>position sticky</h1>
+<p>An element with position: static; is not positioned in any special way; it is 
+always positioned according to the normal flow of the page:</p>
+<div class="sticky">
+  This div element has position: sticky
+</div>
+  <div style="padding-bottom: 2000px">
+  	<p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  	
+
+</div>
+</body>
+</html>
+<hr>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>overlap</title>
+	<style>
+		img{ position: absolute;
+			clip: rect(5px,80px,100px,5px);
+			left: 0px;
+			top: 0px;
+			z-index:-2;
+
+		}
+	</style>
+</head>
+<body>
+	<h1>This is a heading</h1>
+<img src="web.png" width="100" height="140">
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+
+</body>
+</html>
+<hr>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>position</title>
+	<style>
+		f
+		
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+<hr>
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.ex1 {
+  background-color: lightblue;
+  width: 100px;
+  height: 200px;
+  overflow-y:scroll;
+}
+
+div.ex2 {
+  background-color: lightblue;
+  width: 40px;
+  overflow-x: hidden;
+}
+
+div.ex3 {
+  background-color: lightblue;
+  width: 40px;
+  overflow-x: auto;
+}
+
+div.ex4 {
+  background-color: lightblue;
+  width: 40px;
+  overflow-x: visible;
+
+</style>
+</head>
+<body>
+
+<h1>The overflow-x Property</h1>
+
+
+
+<h2>overflow-x: scroll:</h2>
+<div class="ex1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...The overflow-x property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.The overflow-x property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.</div>
+
+<h2>overflow-x: hidden:</h2>
+<div class="ex2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit..</div>
+
+<h2>overflow-x: auto:</h2>
+<div class="ex3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</div>
+
+<h2>overflow-x: visible (default):</h2>
+<div class="ex4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</div>
+
+</body>
+</html>
+<hr>
+

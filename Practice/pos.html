@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float</title>
+	<style>
+	.div4 {
+  border: 1px solid red;
+  float: right;
+  clear: right;
+}
+	</style>
+</head>
+<body>
+	<div class="div4">
+		div4 - Here, clear: left; moves div4 down below the floating div3. 
+	</div>
+	<p>
+	<img src="web.png" height="100px" width="100px" alt="web" style="margin-left: 15px;">
+The overflow-x property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.
+The overflow-x property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.
+The overflow-x property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.</p>
+
+</body>
+</html>
+<hr>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+.clearfix::after {
+  content: "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phase";
+  clear: both;
+  display: table;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.img2 {
+  float: right;
+}
+</style>
+</head>
+<body>
+
+<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+<div class="clearfix">
+  <img class="img1" src="web.png" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+<p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+<div class="clearfix">
+  <img class="img2" src="web.png" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+</body>
+</html>
+<hr>
+
+
+<html>
+
+<head>
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+​
+
+.box {
+
+  float: left;
+  height: 50px;
+
+  width: 50%;
+
+  padding: 5px;
+
+}
+
+.clearfix::after{
+
+  content: "";
+
+  clear: both;
+
+  display: table;
+
+}
+
+</style>
+
+</head>
+
+<body>
+<h2>Grid of Boxes</h2>
+<p>Float boxes side by side:
+</p>
+<div class="clearfix">
+
+  <div class="box" style="background-color:#bbb">
+
+  <p>Some text inside the box.</p>
+
+  </div>
+
+  <div class="box" style="background-color:#ccc">
+
+  <p>Some text inside the box.</p>
+
+  </div>
+
+  <div class="box" style="background-color:#ddd">
+
+  <p><img src="web.png " style="min-width:300px;"></p>
+</div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
