@@ -1,0 +1,15 @@
+input[type=radio]:checked:before {
+	content:"";
+	border-radius: 100%;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 1.2em;
+    background-color: #f47320;
+}

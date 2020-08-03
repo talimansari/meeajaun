@@ -1,0 +1,30 @@
+
+<div class="ribbon round">
+							<span>STEP 1</span>
+							 </div>
+///////////////////////////////css//////////////////////////
+.ribbon{
+	position: absolute;
+	top:0;
+	left:-4%;
+}
+.ribbon span{
+    color: #a53129;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #ffd634;
+    padding: 3px 9px;
+    border-radius: 10px 10px 10px 0px;
+    position: relative;
+}
+.ribbon span:before{
+    position: absolute;
+    
+    content: "";
+    height: 10px;
+    width: 5px;
+    background-color: #720002;
+    bottom: -9px;
+    left: 0px;
+    border-radius: 20px 0px 0px 20px;
+}

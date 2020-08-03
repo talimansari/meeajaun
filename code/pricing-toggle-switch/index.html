@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.toggle, .toggler {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+.toggler {
+  color: #ddd;
+  transition: .2s;
+  font-weight: bold;
+}
+
+.toggler--is-active {
+  color: #9D1726;
+}
+
+.b {
+  display: block;
+}
+
+.toggle {
+  position: relative;
+  width: 80px;
+  height: 35px;
+  border-radius: 100px;
+  background-color: #9D1726;
+  overflow: hidden;
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+.check {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 6;
+}
+
+.check:checked ~ .switch {
+  right: 2px;
+  left: 57.5%;
+  transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-property: left, right;
+  transition-delay: .08s, 0s;
+}
+
+.switch {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  right: 57.5%;
+  background-color: #fff;
+  border-radius: 36px;
+  z-index: 1;
+  transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-property: left, right;
+  transition-delay: 0s, .08s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.pricing-section {
+    padding: 110px 0 150px 0;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+table, th, td {
+  border: 1px solid black;
+}
+.hide{
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+
+
+<section class="pricing-columns pricing-section">
+  <label class="toggler toggler--is-active" id="filt-monthly">Monthly</label>
+  <div class="toggle">
+    <input type="checkbox" id="switcher" class="check">
+    <b class="b switch"></b>
+  </div>
+  <label class="toggler" id="filt-hourly">Hourly</label>
+  <div id="monthly" class="wrapper-full">
+  gjdoghijdhiodjhiodjhoidjghoigjhoigjh
+    </div>
+  </div>
+<div id="hourly" class="wrapper-full hide">
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  var e = document.getElementById("filt-monthly"),
+    d = document.getElementById("filt-hourly"),
+    t = document.getElementById("switcher"),
+    m = document.getElementById("monthly"),
+    y = document.getElementById("hourly");
+
+e.addEventListener("click", function(){
+  t.checked = false;
+  e.classList.add("toggler--is-active");
+  d.classList.remove("toggler--is-active");
+  m.classList.remove("hide");
+  y.classList.add("hide");
+});
+
+d.addEventListener("click", function(){
+  t.checked = true;
+  d.classList.add("toggler--is-active");
+  e.classList.remove("toggler--is-active");
+  m.classList.add("hide");
+  y.classList.remove("hide");
+});
+
+t.addEventListener("click", function(){
+  d.classList.toggle("toggler--is-active");
+  e.classList.toggle("toggler--is-active");
+  m.classList.toggle("hide");
+  y.classList.toggle("hide");
+})
+
+</script>
+</body>
+</html>

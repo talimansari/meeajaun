@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
+<style>
+
+* {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition: all .1s ease;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+.page-section {
+  height: 480px;
+  width: 50%;
+  margin-left: 35%;
+  margin-top: 5%;
+  padding: 3em;
+  background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%);
+  color: white;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+  position: fixed;
+  width: 30%;
+  margin-left: 2%;
+  background-color: blue;
+  color: #fff;
+}
+.navigation__link {
+  display: block;
+  color: pink;
+  text-decoration: none;
+  padding: 1em;
+  font-weight: 400;
+}
+.navigation__link:hover {
+  background-color: #aaa;
+}
+.navigation__link.active {
+  color: white;
+  border-bottom: 2px solid #000;
+}
+
+
+
+</style>
+</head>
+<body>
+<nav class="navigation" id="mainNav">
+      <a class="navigation__link" href="#1">Section 1</a>
+      <a class="navigation__link" href="#2">Section 2</a>
+      <a class="navigation__link" href="#3">Section 3</a>
+      <a class="navigation__link" href="#4">Section 4</a>
+        <a class="navigation__link" href="#5">Section 5</a>
+        <a class="navigation__link" href="#6">Section 6</a>
+        <a class="navigation__link" href="#7">Section 7</a>
+</nav>
+
+<div class="page-section hero" id="1">
+      <h1>Smooth scroll, fixed jump menu with active class</h1>
+</div>
+<div class="page-section" id="2">
+      <h1>Section Two</h1>
+</div>
+<div class="page-section" id="3">
+      <h1>Section Three</h1>
+</div>
+<div class="page-section" id="4">
+      <h1>Section Four</h1>
+</div>
+<div class="page-section" id="5">
+      <h1>Section Five</h1>
+</div>
+<div class="page-section" id="6">
+      <h1>Section Six</h1>
+</div>
+<div class="page-section" id="7">
+      <h1>Section Seven</h1>
+</div>
+<script>
+}).scroll();
+$(document).ready(function() {
+    $('a[href*=#]').bind('click', function(e) {
+        e.preventDefault(); // prevent hard jump, the default behavior
+
+        var target = $(this).attr("href"); // Set the target as variable
+
+        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top
+        }, 600, function() {
+            location.hash = target; //attach the hash (#jumptarget) to the pageurl
+        });
+
+        return false;
+    });
+});
+
+$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+
+    // Show/hide menu on scroll
+    //if (scrollDistance >= 850) {
+    //    $('nav').fadeIn("fast");
+    //} else {
+    //    $('nav').fadeOut("fast");
+    //}
+  
+    // Assign active class to nav links while scolling
+    $('.page-section').each(function(i) {
+        if ($(this).position().top <= scrollDistance) {
+            $('.navigation a.active').removeClass('active');
+            $('.navigation a').eq(i).addClass('active');
+        }
+    });
+}).scroll();
+</script>
+
+</body>
+</html>

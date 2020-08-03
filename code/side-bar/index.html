@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style> 
+     @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+    body{
+      overflow: hidden;
+      font-family: 'Roboto', sans-serif;
+
+    }
+   
+
+a{
+  display: inline-block;
+}
+.mySidenav {
+  width:480px;
+  float:right;
+  background-color:#faefef;
+  position:relative;
+  right:-480px;
+  padding: 20px;
+
+}
+.slider-arrow {
+  float:right;
+  background-color: #a53129;
+  padding: 7px 20px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration:none;
+  text-transform: uppercase;
+  position:relative;
+  right:-480px;
+  transform: rotate(-90deg);
+  margin-right: -50px;
+  margin-top: 100px;
+}
+.slider-arrow  i{
+    margin-right: 5px;
+}
+/*-------------------------inner-side-bar-style------------*/
+.img_wrap{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    padding: 7px;
+    display: inline-block;
+}
+.img_wrap img{
+  max-width: 100%;
+}
+.rt_side_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rt_side_head span{
+    font-size: 13px;
+    color: #4d4d4d;
+}
+.rt_side_head span b{
+
+    font-weight: bold;
+    color: #b92221;
+}
+.rt_side_head a{
+    font-size: 13px;
+    font-weight: bold;
+    color: #b92221;
+    text-decoration:none;
+}
+.rt_side_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.rt_side_content:last-child{
+  border-bottom: 0;
+    padding-bottom: 0;
+}
+.rt_side_wrap1 span{
+  font-size: 13px;
+    color: #4d4d4d;
+    margin-left: 10px;
+}
+.rt_side_wrap2 {
+    display: inline-block;
+}
+.rt_side_wrap2 p {
+    float: left;
+    font-size: 13px;
+    color: #4d4d4d;
+    margin-right: 10px;
+    word-spacing: 1px;
+}
+.rt_side_wrap2 p b{
+   font-weight: bold;
+    color: #b92221;
+}
+.rt_side_wrap2 span{
+  display:block;
+  text-align: right;
+  letter-spacing: 1px;
+}
+.rt_side_wrap2 a{
+  background-color: #b92221;
+  border-radius: 5px;
+  color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <div class="rt_side_wrap">
+
+ <div class="mySidenav">
+  <div class="slide_wrapper">
+    <div class="rt_side_head">
+        <span>Number of groups:<b>3</b></span>
+        <a href="#">Join Group</a>
+      </div>
+    <div class="rt_side_content">
+      <div class="rt_side_wrap1">
+        <div class="img_wrap">
+          <img src="images/detail-purse_03.png">
+        </div>
+        <span>First Product</span>
+      </div>
+      <div class="rt_side_wrap2">
+        <p><b>2</b> more person<span>15:18:34</span></p>
+        <a href="#">join group</a>
+      </div>
+    </div>
+     <div class="rt_side_content">
+    <div class="rt_side_wrap1">
+      <div class="img_wrap">
+        <img src="images/sandle_03.png">
+      </div>
+      <span>First Product</span>
+    </div>
+    <div class="rt_side_wrap2">
+      <p><b>2</b> more person<span>15:18:34</span></p>
+      <a href="#">join group</a>
+    </div>
+    </div>
+      <div class="rt_side_content">
+    <div class="rt_side_wrap1">
+      <div class="img_wrap">
+        <img src="images/boot_03.png">
+      </div>
+      <span>First Product</span>
+    </div>
+    <div class="rt_side_wrap2">
+      <p><b>2</b> more person<span>15:18:34</span></p>
+      <a href="#">join group</a>
+    </div>
+    </div>
+  </div>
+      </div>
+     <a href="javascript:void(0);" class="slider-arrow show"><i class="fas fa-chevron-up"></i>your group</a>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </script>
+<script> 
+$(document).ready(function(){
+$(function(){
+  $('.slider-arrow').click(function(){
+        if($(this).hasClass('show')){
+      $( ".slider-arrow, .mySidenav" ).animate({
+          right: "+=480"
+      }, 700, function() {
+            // Animation complete.
+          });
+      $(this).removeClass('show').addClass('hide');
+        }
+        else {    
+      $( ".slider-arrow, .mySidenav" ).animate({
+          right: "-=480"
+      }, 700, function() {
+            // Animation complete.
+          });
+      $(this).removeClass('hide').addClass('show');    
+        }
+    });
+
+});
+});
+</script>
+</body>
+</html>

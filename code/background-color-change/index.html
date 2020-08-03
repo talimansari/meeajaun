@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+body {
+  height: 200vh;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.header {
+  position: fixed;
+  z-index: 1000;
+  height: 20  px;
+  width: 100%; 
+  background: rgba(34,34,34,0.25);
+  padding: 18px;
+  -webkit-transition: all ease-out .5s;
+  -moz-transition: all ease-out .5s;
+  -o-transition: all ease-out .5s;
+  transition: all ease-out .5s;
+}
+
+.active {
+  background-color: rgba(34,34,34,0.8);
+}
+  </style>
+</head>
+<body>
+<div class="header"></div>
+<script type="text/javascript">
+
+$(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 50) {
+            $(".header").addClass("active");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+           $(".header").removeClass("active");
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>
